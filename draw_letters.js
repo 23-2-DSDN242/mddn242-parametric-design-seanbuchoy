@@ -26,8 +26,8 @@ function drawLetter(letterData) {
   let pos2y = 150 + letterData["offsety"];
 
   // draw two circles
-  fill(darkBlue);
-  ellipse(50, 150, 75, 75);
+  fill(255, 0, 0);
+  ellipse(50, 150, 75, 120);
   fill(lightBlue);
   ellipse(pos2x, pos2y, size2, size2);
 }
