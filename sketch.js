@@ -45,8 +45,8 @@ const letterC = {
   "offset2y": -40,
 }
 
-const backgroundColor  = "#caf0f8";
-const strokeColor      = "#03045e";
+const backgroundColor  = "red";
+const strokeColor      = "#000000";
 
 const darkBlue  = "#0077b6";
 const lightBlue  = "#90e0ef";
@@ -76,6 +76,7 @@ function draw () {
   drawLetter(center_x - 250, center_y, letterA);
   drawLetter(center_x      , center_y, letterB);
   drawLetter(center_x + 250, center_y, letterC);
+
 }
 
 function drawLetter(posx, posy, letterData) {
@@ -89,13 +90,31 @@ function drawLetter(posx, posy, letterData) {
   let pos3x = posx + letterData["offset2x"];
   let pos3y = posy + letterData["offset2y"];
 
+
   // draw two circles
-  fill(255, 0, 0);
-  ellipse(posx, posy, 150, 225);
-  fill(lightBlue);
-  ellipse(pos2x, pos2y, size2, size3);
-  ellipse(pos3x, pos3y, size5, size6);
+  fill(0, 0, 0);
+  noStroke();
+  rect(posx, posy, 5, 225);
+  rect(posx+10, posy, 15, 225);
+  rect(posx+30, posy, 5, 225);
+  rect(posx+45, posy, 5, 225);
+  rect(posx+55, posy, 15, 225);
+  rect(posx+80, posy, 15, 225);
+  rect(posx+100, posy, 5, 225);
+  rect(posx+115, posy, 5, 225);
+  rect(posx+125, posy, 5, 225);
+
+  
+  fill(255);
+  noStroke();
+  rect(pos2x, pos2y, size2, size3);
+  rect(pos3x, pos3y, size5, size6);
+  // draw lines
+
 }
+
+
+
 
 function keyTyped() {
   if (key == '!') {
