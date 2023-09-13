@@ -97,7 +97,7 @@ function computeCurrentSoloChar() {
 let hot_key_press = false;
 function draw () {
   // clear screen
-  background(systemBackgroundColor);
+  background(255);
 
   // draw the interpolation on the guidelines
   push();
@@ -115,7 +115,7 @@ function draw () {
   translate(0, top_margin);
 
   // draw lines
-  stroke(systemLineColor);
+  stroke(0);
   line(left_margin, 0, right_margin, 0);
   for(let i=left_margin; i<right_margin-8; i+=30) {
     line(i, 100, i+12, 100);
