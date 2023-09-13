@@ -59,17 +59,20 @@ function drawLetter(letterData) {
   rect(posx+83, posy-50, 10, 190);
   rect(posx+95, posy-50, 5, 190);
 
-  strokeWeight(5);
-  stroke(255, 0, 0)
-  line(posx-20, posy+45, posx+120, posy+45)
+
 
   noStroke();
-  // draw two circles
+  // draw white boxes
   fill(255);
   rect(pos2x, pos2y, sizex1, sizey1);
   rect(pos3x, pos3y, sizex2, sizey2);
   rect(pos4x, pos4y, sizex3, sizey3);
   rect(pos5x, pos5y, sizex4, sizey4);
+
+  //draw red line
+  strokeWeight(5);
+  stroke(255, 0, 0)
+  line(posx-20, posy+45, posx+120, posy+45)
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
