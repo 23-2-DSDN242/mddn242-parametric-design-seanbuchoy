@@ -24,9 +24,14 @@ function drawLetter(letterData) {
   let posy = 55;
 
   // determine parameters for first rect
+  //the parameters of the other rectangles are exactly the same as this one but named differently so they're independent.
+  //x size of rectangle
   let sizex1 = letterData["size"];
+  //y size of rectangle
   let sizey1 = letterData["size2"];
+  //x offset of rectangle
   let pos2x = 30 + letterData["offsetx"];
+  //y offset of rectangle
   let pos2y = 100 + letterData["offsety"];
 
   // determine parameters for second rect
@@ -35,16 +40,20 @@ function drawLetter(letterData) {
   let pos3x = 30 + letterData["offset2x"];
   let pos3y = 100 + letterData["offset2y"];
 
+  // determine parameters for third rect
   let sizex3 = letterData["size5"];
   let sizey3 = letterData["size6"];
   let pos4x = 30 + letterData["offset3x"];
   let pos4y = 100 + letterData["offset3y"];
 
+  // determine parameters for fourth rect
   let sizex4 = letterData["size7"];
   let sizey4 = letterData["size8"];
   let pos5x = 30 + letterData["offset4x"];
   let pos5y = 100 + letterData["offset4y"];
 
+
+  //draws the barcode using a series of black rectangles with different widths and at different distances from each other
   noStroke();
   fill(0);
   rect(posx, posy-50, 10, 190);
@@ -61,17 +70,17 @@ function drawLetter(letterData) {
 
 
 
+  // draw white boxes with the parameters
   noStroke();
-  // draw white boxes
   fill(255);
   rect(pos2x, pos2y, sizex1, sizey1);
   rect(pos3x, pos3y, sizex2, sizey2);
   rect(pos4x, pos4y, sizex3, sizey3);
   rect(pos5x, pos5y, sizex4, sizey4);
 
-  //draw red line
+  //draw red line in the middle
   strokeWeight(5);
-  stroke(255, 0, 0)
+  stroke(255, 0, 0);
   line(posx-20, posy+45, posx+120, posy+45)
 }
 
